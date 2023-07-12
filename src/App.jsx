@@ -1,25 +1,34 @@
 import illustration from "./images/illustration-dashboard.png";
+import { useState } from "react";
 
 function App() {
-  // const email = document.querySelector("input[type=text]").value;
+  const err = document.querySelector(".error");
+  const input = document.querySelector("input[type=text]");
+  const [email, setEmail] = useState(" ");
 
-  // const handleClick = () => {
-  // console.log(email);
-  // console.log("clicked");
-  // console.log(/^[\w]+@[\w]+[.]{1}[a-zA-Z]{2,}$/.test(email));
-  // };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(email);
+    if (/^[\w]+@[\w]+[.]{1}[a-zA-Z]{2,}$/.test(email)) {
+      err.style.visibility = "hidden";
+      input.style.borderColor = "var(--Pale-Blue)";
+    } else {
+      err.style.visibility = "visible";
+      input.style.borderColor = "var(--Light-Red)";
+    }
+  };
+
   return (
     <main>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
-          id="email"
-          name="email"
           placeholder="Your email address..."
+          onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input type="submit" value="Notify Me" />
+        <div className="error">Please provide a valid email address</div>
       </form>
-      <div className="error">Please provide a valid email address</div>
       <img src={illustration} alt="illustration" />
     </main>
   );
