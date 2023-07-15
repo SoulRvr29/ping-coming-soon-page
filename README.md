@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://your-solution-url.com](https://www.frontendmentor.io/solutions/ping-coming-soon-page-8jIrucELDD)
 - Live Site URL: [https://soulrvr29.github.io/ping-coming-soon-page/](https://soulrvr29.github.io/ping-coming-soon-page/)
 
 ### Built with
