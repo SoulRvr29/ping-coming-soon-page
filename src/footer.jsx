@@ -29,7 +29,7 @@ const Footer = () => {
         </p>
         <p className="attribution">
           Challenge by{" "}
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          <a href="https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da" target="_blank">
             Frontend Mentor
           </a>
           . Coded by{" "}
